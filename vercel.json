@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "env": {
+    "UNSPLASH_ACCESS_KEY": "@unsplash-access-key"
+  },
+  "headers": [
+    {
+      "source": "/api/unsplash",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=1200, stale-while-revalidate=600"
+        }
+      ]
+    }
+  ]
+}
