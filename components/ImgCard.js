@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
-export default function ImgCard({ id, open, setOpen, result, index }) {
+export default function ImgCard({ id, open, setOpen, result }) {
   const isOpen = open === id;
 
   return (
@@ -70,7 +70,7 @@ export default function ImgCard({ id, open, setOpen, result, index }) {
 
                 {result.description ? (
                   <motion.div
-                    className="rounded-md bg-white px-4 py-2 divide-y-2 divide-gray-500 divide-dotted"
+                    className="text-gray-800 bg-white px-4 py-2 divide-y-2 divide-gray-500 divide-dotted"
                     variants={textVariants}
                   >
                     <p>{result.description}</p>
