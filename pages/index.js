@@ -87,7 +87,7 @@ export default function Home() {
     <Container title="Photos" description="我爱大自然">
       <div className="flex flex-col justify-center items-start max-w-3xl px-5 pt-safe-top mx-auto my-12">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight my-4 md:mt-8">
-          <Sparkles>Photos</Sparkles>.
+          <Sparkles>🖼 Photos</Sparkles>
         </h1>
         <Gallery />
       </div>

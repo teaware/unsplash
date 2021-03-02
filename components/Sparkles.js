@@ -100,6 +100,7 @@ const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
   );
   return (
     <div {...delegated} className="inline-block relative">
+      <div>{children}</div>
       {sparkles.map((sparkle) => (
         <Sparkle
           key={sparkle.id}
@@ -108,7 +109,6 @@ const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
           style={sparkle.style}
         />
       ))}
-      <div className="relative">{children}</div>
     </div>
   );
 };

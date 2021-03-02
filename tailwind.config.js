@@ -14,8 +14,8 @@ module.exports = {
           "100%": { transform: "rotate(180deg)" },
         },
         animation: {
-          "come-in-out": "'come-in-out' 700ms forwards",
-          spin: "spin 1000ms linear",
+          "come-in-out": "'come-in-out' 300ms forwards",
+          spin: "spin 500ms linear forwards",
         },
       },
     },
