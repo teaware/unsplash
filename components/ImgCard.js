@@ -1,20 +1,20 @@
 import Image from "next/image";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
-export default function ImgCard({ id, open, setOpen, result }) {
+export default function ImgCard({ id, open, setOpen, photo }) {
   const isOpen = open === id;
 
   return (
     <AnimateSharedLayout type="crossfade">
-      {Math.ceil(result.height / result.width) === 1 ? (
+      {Math.ceil(photo.height / photo.width) === 1 ? (
         <div
           className="h-40 row-span-1 rounded-md shadow-md cursor-pointer relative"
           onClick={() => setOpen(id)}
         >
           <Image
             className="rounded-md"
-            src={result.urls.small}
-            alt={result.description}
+            src={photo.urls.small}
+            alt={photo.description}
             layout="fill"
             objectFit="cover"
           />
@@ -26,8 +26,8 @@ export default function ImgCard({ id, open, setOpen, result }) {
         >
           <Image
             className="rounded-md"
-            src={result.urls.small}
-            alt={result.alt_description}
+            src={photo.urls.small}
+            alt={photo.alt_description}
             layout="fill"
             objectFit="cover"
           />
@@ -56,24 +56,24 @@ export default function ImgCard({ id, open, setOpen, result }) {
                 variants={backVariants}
               >
                 <motion.div
-                  style={{ backgroundColor: `${result.color}` }}
+                  style={{ backgroundColor: `${photo.color}` }}
                   variants={imageVariants}
                 >
                   <Image
-                    src={result.urls.regular}
-                    alt={result.alt_description}
+                    src={photo.urls.regular}
+                    alt={photo.alt_description}
                     width={1080}
-                    height={(1080 * result.height) / result.width}
+                    height={(1080 * photo.height) / photo.width}
                     layout="responsive"
                   />
                 </motion.div>
 
-                {result.description ? (
+                {photo.description ? (
                   <motion.div
                     className="text-gray-800 bg-white px-4 py-2 divide-y-2 divide-gray-500 divide-dotted"
                     variants={textVariants}
                   >
-                    <p>{result.description}</p>
+                    <p>{photo.description}</p>
                   </motion.div>
                 ) : (
                   ""
