@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import Img from "../../components/Img";
 
-export default function Home() {
+export default function Cats() {
   return (
     <>
       <Head>
