@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="zh">
-        {/* <Head>
+        <Head>
           <link
             rel="shortcut icon"
             type="image/png"
@@ -24,7 +24,7 @@ class MyDocument extends Document {
             content="/static/favicons/browserconfig.xml"
             name="msapplication-config"
           />
-        </Head> */}
+        </Head>
         <body>
           <Main />
           <NextScript />
