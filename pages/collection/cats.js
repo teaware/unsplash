@@ -5,7 +5,7 @@ export default function Cats() {
   return (
     <Container title="猫" description="猫选辑的描述">
       <section className="mt-32 md:mt-16 lg:mt-20">
-        <h1 className="text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl">
+        <h1 className="text-4xl leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl">
           猫 <span className="animate-cat inline-block">🐱</span>
         </h1>
       </section>

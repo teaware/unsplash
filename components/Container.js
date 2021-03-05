@@ -30,7 +30,7 @@ export default function Container(props) {
       <div className="flex flex-col w-full min-h-screen font-sans text-base antialiased text-gray-800 bg-white dark:text-white dark:bg-gray-600">
         <div className="fixed top-6 left-6 lg:top-12 lg:left-12 2lg:top-24 2lg:left-24 mt-safe-top z-10">
           <Link href="/collection">
-            <a className="text-3xl underline">Jas</a>
+            <a className="font-serif text-3xl underline">Jas</a>
           </Link>
         </div>
         <div className="fixed bottom-6 left-6 lg:bottom-12 lg:left-12 2lg:bottom-24 2lg:left-24 z-10">
@@ -60,7 +60,7 @@ export default function Container(props) {
             )}
           </button>
           <Link href="/about">
-            <a className="text-3xl underline">about</a>
+            <a className="font-serif text-3xl underline">about</a>
           </Link>
         </div>
 
