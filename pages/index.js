@@ -8,7 +8,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const PAGE_SIZE = 20;
 const KEY = "XCBO8zFMaRQfr0qLU77eCHfzrHDpomBjH-lomBPs5Wo";
 
-function Gallery() {
+function UNGallery() {
   const { data, error, size, setSize } = useSWRInfinite(
     (index) =>
       `https://api.unsplash.com/users/ryoji__iwata/photos?client_id=${KEY}&per_page=${PAGE_SIZE}&page=${
@@ -89,7 +89,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight my-4 md:mt-8">
           <Sparkles>Photos</Sparkles>
         </h1>
-        <Gallery />
+        <UNGallery />
       </div>
     </Container>
   );

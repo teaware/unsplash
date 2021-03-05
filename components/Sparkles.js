@@ -116,13 +116,13 @@ const Sparkle = ({ size, color, style }) => {
   const path =
     "M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z";
   return (
-    <div style={style} className="absolute bling">
+    <div style={style} className="absolute motion-safe:animate-bling">
       <svg
         width={size}
         height={size}
         viewBox="0 0 68 68"
         fill="none"
-        className="block spin2"
+        className="block motion-safe:animate-spin2"
       >
         <path d={path} fill={color} />
       </svg>
@@ -130,22 +130,4 @@ const Sparkle = ({ size, color, style }) => {
   );
 };
 
-// const SparkleWrapper = styled.span`
-//   position: absolute;
-//   display: block;
-//   @media (prefers-reduced-motion: no-preference) {
-//     animation: ${comeInOut} 700ms forwards;
-//   }
-// `;
-// const SparkleSvg = styled.svg`
-//   display: block;
-//   @media (prefers-reduced-motion: no-preference) {
-//     animation: ${spin} 1000ms linear;
-//   }
-// `;
-// const ChildWrapper = styled.strong`
-//   position: relative;
-//   z-index: 1;
-//   font-weight: bold;
-// `;
 export default Sparkles;

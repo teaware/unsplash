@@ -6,23 +6,27 @@ class MyDocument extends Document {
       <Html lang="zh">
         <Head>
           <link
-            rel="shortcut icon"
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
             type="image/png"
-            sizes="196x196"
-            href="icons/favicon-196.png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="apple-touch-icon" href="icons/apple-icon-180.png" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="black-translucent"
-          />
-          <meta content="#ffffff" name="theme-color" />
-          <meta content="#ffffff" name="msapplication-TileColor" />
-          <meta
-            content="/static/favicons/browserconfig.xml"
-            name="msapplication-config"
           />
         </Head>
         <body>
