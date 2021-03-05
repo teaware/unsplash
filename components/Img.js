@@ -16,6 +16,7 @@ export default function Img({ type, src, width, height }) {
           src={src}
           width={width}
           height={height}
+          layout="responsive"
         />
       </div>
     </div>
