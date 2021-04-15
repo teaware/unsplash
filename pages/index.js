@@ -5,13 +5,13 @@ import ImgCard from "../components/ImgCard";
 import Sparkles from "../components/Sparkles";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 10;
 const KEY = "XCBO8zFMaRQfr0qLU77eCHfzrHDpomBjH-lomBPs5Wo";
 
 function UNGallery() {
   const { data, error, size, setSize } = useSWRInfinite(
     (index) =>
-      `https://api.unsplash.com/users/ryoji__iwata/photos?client_id=${KEY}&per_page=${PAGE_SIZE}&page=${
+      `https://api.unsplash.com/users/teaware/photos?client_id=${KEY}&per_page=${PAGE_SIZE}&page=${
         index + 1
       }`,
     fetcher
@@ -85,9 +85,9 @@ function UNGallery() {
 export default function Home() {
   return (
     <Container title="Photos" description="我爱大自然">
-      <div className="flex flex-col justify-center items-start max-w-3xl px-5 pt-safe-top mx-auto my-12">
+      <div className="flex flex-col justify-center items-start pt-safe-top mx-auto my-12">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight my-4 md:mt-8">
-          <Sparkles>Photos</Sparkles>
+          <Sparkles>Unsplash Feed</Sparkles>
         </h1>
         <UNGallery />
       </div>

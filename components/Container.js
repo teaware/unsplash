@@ -31,7 +31,7 @@ export default function Container(props) {
         <div className="fixed top-6 left-6 lg:top-12 lg:left-12 2lg:top-24 2lg:left-24 mt-safe-top z-10">
           <Link href="/collection">
             <a className="font-serif text-3xl underline hover:no-underline">
-              Jas
+              George
             </a>
           </Link>
         </div>
@@ -39,7 +39,7 @@ export default function Container(props) {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-8 h-8 flex items-center justify-center rounded-full select-none outline-none focus:outline-none border-none"
+            className="w-8 h-8 flex items-center justify-center rounded-full select-none outline-none focus:outline-none border-none mb-6"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {mounted && (

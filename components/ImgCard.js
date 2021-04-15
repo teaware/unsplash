@@ -48,11 +48,11 @@ export default function ImgCard({ id, open, setOpen, photo }) {
               variants={mask}
             ></motion.div>
             <div
-              className="fixed inset-0 w-full h-screen flex justify-center overflow-y-scroll"
+              className="fixed inset-0 w-full h-screen flex justify-center items-center overflow-y-scroll"
               onClick={() => setOpen("")}
             >
               <motion.div
-                className="w-3/4 max-w-full mx-auto my-5"
+                className="w-full max-w-screen-lg mx-auto py-5"
                 variants={backVariants}
               >
                 <motion.div

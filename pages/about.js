@@ -6,7 +6,7 @@ export default function About() {
     <Container title="About" description="关于">
       <div className="lg:flex lg:justify-end lg:items-end">
         <section className="lg:w-1/4 mt-32 md:mt-16 lg:mt-20">
-          <h1 className="text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl">
+          <h1 className="text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl lg:font-medium xl:text-7xl">
             猫 <span className="animate-cat inline-block">🐱</span>
           </h1>
           <p className="mt-4">是一只可爱的猫咪</p>
