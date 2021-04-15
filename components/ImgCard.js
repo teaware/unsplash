@@ -13,7 +13,7 @@ export default function ImgCard({ id, open, setOpen, photo }) {
         >
           <Image
             className="rounded-md"
-            src={photo.urls.small}
+            src={photo.urls.regular}
             alt={photo.description}
             layout="fill"
             objectFit="cover"
@@ -26,7 +26,7 @@ export default function ImgCard({ id, open, setOpen, photo }) {
         >
           <Image
             className="rounded-md"
-            src={photo.urls.small}
+            src={photo.urls.regular}
             alt={photo.alt_description}
             layout="fill"
             objectFit="cover"
@@ -60,7 +60,7 @@ export default function ImgCard({ id, open, setOpen, photo }) {
                   variants={imageVariants}
                 >
                   <Image
-                    src={photo.urls.regular}
+                    src={photo.urls.full}
                     alt={photo.alt_description}
                     width={1080}
                     height={(1080 * photo.height) / photo.width}

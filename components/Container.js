@@ -29,7 +29,7 @@ export default function Container(props) {
 
       <div className="flex flex-col w-full min-h-screen font-sans text-base antialiased text-gray-800 bg-white dark:text-white dark:bg-gray-600">
         <div className="fixed top-6 left-6 lg:top-12 lg:left-12 2lg:top-24 2lg:left-24 mt-safe-top z-10">
-          <Link href="/collection">
+          <Link href="/">
             <a className="font-serif text-3xl underline hover:no-underline">
               George
             </a>
@@ -39,7 +39,7 @@ export default function Container(props) {
           <button
             aria-label="Toggle Dark Mode"
             type="button"
-            className="w-8 h-8 flex items-center justify-center rounded-full select-none outline-none focus:outline-none border-none mb-6"
+            className="w-8 h-8 flex items-center justify-center rounded-full select-none outline-none focus:outline-none border-none mb-4"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {mounted && (
@@ -61,8 +61,13 @@ export default function Container(props) {
               </svg>
             )}
           </button>
+          <Link href="/collection">
+            <a className="block font-serif text-3xl underline hover:no-underline mb-4">
+              collection
+            </a>
+          </Link>
           <Link href="/about">
-            <a className="font-serif text-3xl underline hover:no-underline">
+            <a className="block font-serif text-3xl underline hover:no-underline">
               about
             </a>
           </Link>
