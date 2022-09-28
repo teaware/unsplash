@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { useState } from "react";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+
+const cn = (...classes) => {
+  return classes.filter(Boolean).join(" ");
+};
 
 export default function ImgCard({ id, open, setOpen, photo }) {
   const isOpen = open === id;
-
+  const [isLoading, setLoading] = useState(true);
   return (
     <AnimateSharedLayout type="crossfade">
       {Math.ceil(photo.height / photo.width) === 1 ? (
@@ -12,11 +17,17 @@ export default function ImgCard({ id, open, setOpen, photo }) {
           onClick={() => setOpen(id)}
         >
           <Image
-            className="rounded-md"
             src={photo.urls.regular}
             alt={photo.description}
             layout="fill"
             objectFit="cover"
+            className={cn(
+              "duration-700 ease-in-out rounded-md",
+              isLoading
+                ? "grayscale blur-2xl scale-110"
+                : "grayscale-0 blur-0 scale-100"
+            )}
+            onLoadingComplete={() => setLoading(false)}
           />
         </div>
       ) : (
@@ -25,11 +36,17 @@ export default function ImgCard({ id, open, setOpen, photo }) {
           onClick={() => setOpen(id)}
         >
           <Image
-            className="rounded-md"
             src={photo.urls.regular}
             alt={photo.alt_description}
             layout="fill"
             objectFit="cover"
+            className={cn(
+              "duration-700 ease-in-out rounded-md",
+              isLoading
+                ? "grayscale blur-2xl scale-110"
+                : "grayscale-0 blur-0 scale-100"
+            )}
+            onLoadingComplete={() => setLoading(false)}
           />
         </div>
       )}
